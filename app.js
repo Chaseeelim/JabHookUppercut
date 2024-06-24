@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Handle sound button click
-    document.getElementById('soundButton').addEventListener('click', function() {
+    document.getElementById('closePopup').addEventListener('click', function() {
         var sound = document.getElementById('buttonSound');
         sound.play();
     });
@@ -106,17 +106,17 @@ function tipsDisplay() {
         .catch(error => console.error('Error fetching the tips:', error));
 };
 
-document.getElementById('r').addEventListener('click', function() {
+document.getElementById('jab').addEventListener('click', function() {
     var sound = document.getElementById('buttonSound');
     sound.play();
 });
 
-document.getElementById('p').addEventListener('click', function() {
+document.getElementById('uppercut').addEventListener('click', function() {
     var sound = document.getElementById('buttonSound');
     sound.play();
 });
 
-document.getElementById('s').addEventListener('click', function() {
+document.getElementById('hook').addEventListener('click', function() {
     var sound = document.getElementById('buttonSound');
     sound.play();
 });
