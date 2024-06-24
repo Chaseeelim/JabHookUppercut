@@ -8,15 +8,22 @@
 </head>
 
 <body>
-    <header>
-        <h1>GAME: Jab Uppercuts Hooks </h1>
-        <h2>Rules of the Game: </h2>
-        <h2>Jab beats Hook</h2>
-        <h2>Hook beats Uppercut</h2>
-        <h2>Uppercut beats Jab</h2>
-       
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <h2>GAME: Jab-Uppercuts-Hooks</h2>
+            <br>
+            <p>Rules of the Game:</p>
+            <div class="content">
+                <ol class="indented-list">
+                    <li>Jab beats Hook</li>
+                    <li>Hook beats Uppercut</li>
+                    <li>Uppercut beats Jab</li>
+                </ol>
+            </div>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
 
-    </header>
     <div class="scoreboard">
         <div id="user-label" class="badge">user</div>
         <div id="comp-label" class="badge">comp</div>
@@ -26,6 +33,7 @@
     <div class="result">
         <p>Jab | Uppercuts | Hooks</p>
     </div>
+
     <audio id="buttonSound" src="sounds\Punch - Sound Effect (HD).mp3"></audio>
     <div class="choices">
         <div class="choice" id="jab">
@@ -36,7 +44,6 @@
         </div>
         <div class="choice" id="hook">
             <img src="images\hook.png" alt="image not found">
-
         </div>
     </div>
 

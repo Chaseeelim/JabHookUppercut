@@ -73,6 +73,26 @@ hook_div.addEventListener("click", function () {
     game("Hook");
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the popup elements
+    var popupOverlay = document.getElementById('popupOverlay');
+    var closePopupButton = document.getElementById('closePopup');
+
+    // Show the popup when the page loads
+    popupOverlay.style.display = 'flex';
+
+    // Hide the popup when the close button is clicked
+    closePopupButton.addEventListener('click', function() {
+        popupOverlay.style.display = 'none';
+    });
+
+    // Handle sound button click
+    document.getElementById('soundButton').addEventListener('click', function() {
+        var sound = document.getElementById('buttonSound');
+        sound.play();
+    });
+});
+
 // tips display
 function tipsDisplay() {
     fetch('tips.txt')  // Adjust the path to where your file is hosted on your server
