@@ -58,7 +58,7 @@ header > h2 {
     position: absolute;
     background-color: red;
     top: 20px;
-    right: -50px;
+    right: -110px;
     padding: 10px;
 }
 
@@ -127,7 +127,7 @@ header > h2 {
 }
 
 .tips-div > h2 {
-    color: black;
+    color: ;
     font-family: sans-serif;
     font-size: 24px;
 }
