@@ -50,7 +50,7 @@ header > h2 {
     position: absolute;
     background-color: red;
     top: 20px;
-    left: -25px;
+    left: -30px;
     padding: 10px;
 }
 
@@ -58,7 +58,7 @@ header > h2 {
     position: absolute;
     background-color: red;
     top: 20px;
-    right: -30px;
+    right: -50px;
     padding: 10px;
 }
 
