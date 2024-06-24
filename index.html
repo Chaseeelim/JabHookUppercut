@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Jab Uppercuts Hooks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>GAME: Jab Uppercuts Hooks </h1>
+        <h2>Rules of the Game: </h2>
+        <h2>Jab beats Hook</h2>
+        <h2>Hook beats Uppercut</h2>
+        <h2>Uppercut beats Jab</h2>
+       
+
+    </header>
+    <div class="scoreboard">
+        <div id="user-label" class="badge">user</div>
+        <div id="comp-label" class="badge">comp</div>
+        <span id="user-score">0</span>:<span id="comp-score">0</span>
+    </div>
+
+    <div class="result">
+        <p>Jab | Uppercuts | Hooks</p>
+    </div>
+    <audio id="buttonSound" src="sounds\Punch - Sound Effect (HD).mp3"></audio>
+    <div class="choices">
+        <div class="choice" id="jab">
+            <img src="images\jab.png" alt="image not found">
+        </div>
+        <div class="choice" id="uppercut">
+            <img src="images/uppercut.png" alt="image not found">
+        </div>
+        <div class="choice" id="hook">
+            <img src="images\hook.png" alt="image not found">
+
+        </div>
+    </div>
+
+    <p id="action-message">Make your move.</p>
+
+    <div class="parent-container">
+        <div class="tips-div">
+            <h2>Boxing Tips</h2>
+            <p id="tips">If you are right handed, a jab is a straigh punch thrown from your left hand</p>
+        </div>
+    </div>
+
+    <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>

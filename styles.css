@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+
+}
+header {
+    background: white;
+    padding: 20px;
+}
+
+header > h1 {
+    font-size: 24px;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+header > h2 {
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+.scoreboard {
+    border: 3px solid black;
+    margin: 20px auto;
+    padding: 15px 20px;
+    width: 200px;
+    color: white;
+    border-radius: 4px;
+    font-family: Asap, sans-serif;
+    font-size: 46px;
+    position: relative;
+    text-align: center;
+}
+
+.badge {
+    font-size: 24px;
+}
+
+
+#user-label {
+    position: absolute;
+    background-color: red;
+    top: 30px;
+    left: -25px;
+}
+
+#comp-label {
+    position: absolute;
+    background-color: red;
+    top: 30px;
+    right: -25px;
+}
+
+.result {
+    font-size: 40px;
+    padding: 20px;
+
+}
+
+.result > p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.choices {
+ text-align: center;
+ margin-top: 50px;
+}
+
+.choice {
+    display: inline-block;
+    border: 4px white solid;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 0 20px;
+    transition: 0.3s;
+}
+
+.choice > img {
+    max-width: 225px;
+    max-height: 225px;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: green; 
+}
+
+#action-message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 10px;
+    color: white;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    height: 20hv; /* Example height for parent container */
+    position: relative; /* Ensure parent container takes up space */
+    margin-top: 30px;
+}
+
+.tips-div {
+    font-size: 24px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    background: #444; /* Background for visibility */
+    padding: 20px; /* Padding for better presentation */
+    border-radius: 10px; /* Optional: rounded corners */
+    width: 50%;
+    margin-top: 30px;
+}
+
+.tips-div > h2 {
+    color: yellow;
+}
+
+#tips {
+    font-size: 24px;
+    color: white;
+    margin: 20px 40px;
+    padding: 30px;
+}
+
+
+
+
