@@ -188,5 +188,11 @@ header > h2 {
     padding-left: 0; /* Removes default left padding of the list items */
 }
 
+#credits {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
 
 
