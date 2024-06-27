@@ -13,6 +13,10 @@ const result_div = document.querySelector(".result > p");
 const jab_div = document.getElementById("jab")
 const uppercut_div = document.getElementById("uppercut")
 const hook_div = document.getElementById("hook")
+const user_name = document.getElementById("userName")
+const modal = document.getElementById("winnerModal");
+const modalContent = document.getElementById("winnerMessage");
+const span = document.getElementsByClassName("close")[0];
 
 function getCompChoice() {
     options = ["Jab", "Hook", "Uppercut"]
@@ -24,16 +28,29 @@ function win(user_choice, comp_choice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     result_div.innerHTML = user_choice + " Beats " + comp_choice + " you win! "
+    changeTextColor(result_div, 'green');
+    declareWinner(true); // Pass true for user win
+
 }
 
 function lose(user_choice, comp_choice) {
     compScore++;
     compScore_span.innerHTML = compScore;
     result_div.innerHTML = user_choice + " loses to " + comp_choice + " you lose! "
+    changeTextColor(result_div, 'red');
+    declareWinner(false); // Pass false for computer win
+
 }
 
 function draw(user_choice, comp_choice) {
     result_div.innerHTML = user_choice + " equals to " + comp_choice + " It's a draw!"
+    changeTextColor(result_div, 'gray');
+}
+
+function changeTextColor(element, color) {
+    if (element) {
+        element.style.color = color;
+    }
 }
 
 function game(user_choice) {
@@ -44,18 +61,37 @@ function game(user_choice) {
         case "UppercutJab":
         case "HookUppercut":
             win(user_choice, comp_choice);
+            declareWinner()
             break;
         case "JabUppercut":
         case "UppercutHook":
         case "HookJab":
             lose(user_choice, comp_choice);
+            declareWinner()
             break;
         case "JabJab":
         case "HookHook":
         case "UppercutUppercut":
-            draw(user_choice, comp_choice)
+            draw(user_choice, comp_choice);
+            declareWinner()
             break;
     }
+}
+
+function declareWinner(userWins) {
+    if (userScore === 10 || compScore === 10) {
+        modalContent.innerHTML = userWins ?  document.getElementById('user-name').value + " Wins!" : "Byte Tyson Wins!";
+        modalContent.className = userWins ? "modal-content win" : "modal-content lose";
+        modal.style.display = "block";
+        resetScores();
+    }
+}
+
+function resetScores() {
+    userScore = 0;
+    compScore = 0;
+    userScore_span.innerHTML = "0";
+    compScore_span.innerHTML = "0";
 }
 
 jab_div.addEventListener("click", function () {
@@ -77,6 +113,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the popup elements
     var popupOverlay = document.getElementById('popupOverlay');
     var closePopupButton = document.getElementById('closePopup');
+    var userNameInput = document.getElementById('user-name');
+    var proceedButton = document.getElementById('closePopup');
+    var userLabel = document.getElementById('user-label');
+
+    proceedButton.addEventListener('click', function() {
+        var userName = userNameInput.value;
+        userLabel.innerHTML = userName;
+    });
 
     // Show the popup when the page loads
     popupOverlay.style.display = 'flex';
@@ -105,6 +149,17 @@ function tipsDisplay() {
         })
         .catch(error => console.error('Error fetching the tips:', error));
 };
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
 
 document.getElementById('jab').addEventListener('click', function() {
     var sound = document.getElementById('buttonSound');
