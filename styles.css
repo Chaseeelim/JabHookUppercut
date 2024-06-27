@@ -142,19 +142,6 @@ header > h2 {
     margin-top: 30px;
 }
 
-.tips-div > h2 {
-    color: #fef5ea;
-    font-family: sans-serif;
-    font-size: 24px;
-}
-
-#tips {
-    font-size: 16px;
-    color: #fef5ea;
-    margin: 10px 20px;
-    padding: 25px;
-    font-family: sans-serif;
-}
 
 #credits {
     color: #fef5ea;
@@ -280,10 +267,16 @@ header > h2 {
     font-size: 16px;
 }
 
-#tips {
-    font-size: 24px;
-    text-align: center;
+.tips-div > h2 {
+    color: #fef5ea;
     font-family: sans-serif;
-    color: white;
-    margin-top: 25px;
+    font-size: 20px;
+}
+
+#tips {
+    font-size: 16px;
+    color: #fef5ea;
+    margin: 10px 20px;
+    padding: 25px;
+    font-family: sans-serif;
 }

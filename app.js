@@ -79,7 +79,7 @@ function game(user_choice) {
 }
 
 function declareWinner(userWins) {
-    if (userScore === 1 || compScore === 1) {
+    if (userScore === 10 || compScore === 10) {
         modalContent.innerHTML = userWins ?  document.getElementById('user-name').value + " Wins!" : "Byte Tyson Wins!";
         modalContent.className = userWins ? "modal-content win" : "modal-content lose";
         modal.style.display = "block";
