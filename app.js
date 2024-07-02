@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // tips display
 function tipsDisplay() {
-    fetch('tips.txt')  // Adjust the path to where your file is hosted on your server
+    fetch('tips.txt')  
         .then(response => response.text())
         .then(data => {
             const lines = data.split('\n'); // Split the content into lines
